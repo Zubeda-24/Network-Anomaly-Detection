@@ -44,62 +44,63 @@ The model is trained on the **NSL-KDD** dataset and provides an easy-to-use web 
 
 ## 🤖 Machine Learning Model
 
-- Random Forest Classifier
+**Algorithm:** Random Forest Classifier
 
-Model Accuracy:
-
-**82.38%**
+**Accuracy:** **82.38%**
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 Network-Anomaly-Detection/
+│
+├── dataset/
+├── models/
+├── screenshots/
+│   ├── home.png
+│   └── result.png
+├── static/
+├── templates/
 │
 ├── app.py
 ├── preprocess.py
 ├── train_model.py
 ├── predict.py
 ├── requirements.txt
-├── README.md
 ├── sample_test.csv
-│
-├── dataset/
-├── models/
-├── static/
-└── templates/
+└── README.md
 ```
 
 ---
 
 ## ⚙️ Installation
 
-Clone the repository:
+### Clone the repository
 
 ```bash
 git clone https://github.com/Zubeda-24/Network-Anomaly-Detection.git
 ```
 
-Go into the project folder:
+### Go to the project folder
 
 ```bash
 cd Network-Anomaly-Detection
 ```
 
-Install the required packages:
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the application:
+### Run the application
 
 ```bash
 python app.py
 ```
 
-Open your browser:
+### Open in browser
 
 ```
 http://127.0.0.1:5000
@@ -116,15 +117,17 @@ http://127.0.0.1:5000
 
 ---
 
-## 📸 Screenshots
+# 📸 Screenshots
 
-### Home Page
+## 🏠 Home Page
 
-(Add Home Page Screenshot Here)
+![Home Page](screenshots/home.png)
 
-### Prediction Result
+---
 
-(Add Prediction Result Screenshot Here)
+## 📊 Prediction Result
+
+![Prediction Result](screenshots/result.png)
 
 ---
 
@@ -142,5 +145,4 @@ http://127.0.0.1:5000
 
 **Kandukuri Zubeda**
 
-GitHub:
-https://github.com/Zubeda-24
+GitHub: https://github.com/Zubeda-24
