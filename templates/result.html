@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>📊 Prediction Result</h1>
+
+        <p>Your uploaded network traffic has been analysed successfully.</p>
+
+        <div class="info">
+
+            <div class="box">
+
+                <h3>✅ Normal Traffic</h3>
+
+                <h2>{{ normal }}</h2>
+
+            </div>
+
+            <div class="box">
+
+                <h3>⚠ Attack Traffic</h3>
+
+                <h2>{{ attack }}</h2>
+
+            </div>
+
+            <div class="box">
+
+                <h3>🎯 Accuracy</h3>
+
+                <h2>82.38%</h2>
+
+            </div>
+
+        </div>
+
+        <div class="summary">
+
+            <h3>Summary</h3>
+
+            <p>Total Records Processed:
+                <strong>{{ normal + attack }}</strong>
+            </p>
+
+            {% if attack == 0 %}
+
+            <p style="color:limegreen;">
+                ✔ No malicious traffic detected.
+            </p>
+
+            {% else %}
+
+            <p style="color:red;">
+                ⚠ Malicious traffic detected.
+            </p>
+
+            {% endif %}
+
+        </div>
+
+        <br>
+
+        <h2>Traffic Distribution</h2>
+
+        <img
+            src="{{ url_for('static', filename='charts/pie_chart.png') }}"
+            alt="Traffic Distribution"
+            width="400">
+
+        <br><br>
+
+        <a href="/">
+
+            <button>
+
+                Analyse Another File
+
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

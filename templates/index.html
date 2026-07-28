@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Anomaly Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>🛡️ Network Anomaly Detection</h1>
+
+        <p>
+            AI-powered intrusion detection using Machine Learning.
+        </p>
+
+        <div class="info">
+
+            <div class="box">
+                <h3>Model</h3>
+                <p>Random Forest</p>
+            </div>
+
+            <div class="box">
+                <h3>Accuracy</h3>
+                <p>82.38%</p>
+            </div>
+
+            <div class="box">
+                <h3>Dataset</h3>
+                <p>NSL-KDD</p>
+            </div>
+
+        </div>
+
+        <form action="/predict"
+              method="POST"
+              enctype="multipart/form-data">
+
+            <input
+                type="file"
+                name="file"
+                accept=".csv"
+                required>
+
+            <button type="submit">
+                Analyse Network Traffic
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
